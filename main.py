@@ -101,6 +101,7 @@ for i in range(0,2):
                 print('base = ', bts.base(res.x))
                 print('delta_phi = ', np.rad2deg(res.x[0]) - np.rad2deg(res.x[1]))
                 print('box = ', o3db.get_box(res.x))
+                print('mirrors = ', bts.L_1(res.x), bts.L_2(res.x))
                 if (res.fun < global_opt_vals[3]):
                     global_opt_vals[0] = res.x[0]
                     global_opt_vals[1] = res.x[1]
@@ -115,3 +116,4 @@ print('perimeter =', global_opt_vals[3])
 print('base = ', bts.base(global_opt_vals))
 print('delta_phi = ', np.rad2deg(global_opt_vals[0]) - np.rad2deg(global_opt_vals[1]))
 print('box = ', o3db.get_box(global_opt_vals))
+print('mirrors = ', bts.L_1(global_opt_vals), bts.L_2(global_opt_vals))
